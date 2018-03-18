@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat Real-Time con Socket.io</title>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	 <style>
+	 	#messages{
+			width: 95%;
+			max-width: 400px;
+			height: 350px;
+			overflow-y: scroll;
+			border: solid 1px #eee;
+			box-shadow: 0px 0px 10px #ccc inset;
+	 	}
+	 	.message{
+			margin: 20px;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			background: white;
+	 	}
+	 </style>
+	<h1>Chat Real-Time con Socket.io</h1>
+	<div id="messages"></div>
+
+	<form onsubmit="return addMessage(this);">
+		<input id="nickname" type="text" placeholder="nick">
+		<textarea id="text" placeholder="mensaje..."></textarea>
+		<input type="submit" value="enviar">
+	</form>
+
+
+</body>
+</html>
